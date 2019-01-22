@@ -1,0 +1,12 @@
+﻿@model IEnumerable<MyClinic.WEB.Models.DoctorViewModel>
+
+@{
+    
+}
+
+<h2>Sign index</h2>
+
+@foreach(var doc in Model)
+{
+    @Html.ActionLink(doc.FirstName + " " + doc.LastName, "GetSchedule", "Sign", new { docid = doc.Id }, new {@class = "doclink" }) <br>
+}

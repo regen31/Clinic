@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyClinic.WEB", "MyClinic.WEB\MyClinic.WEB.csproj", "{7B14F9ED-7C4A-4604-8F8C-726A44760A54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyClinic.Domain", "MyClinic.Domain\MyClinic.Domain.csproj", "{68FFF4E2-51EC-404C-B642-5B5BBEEDD795}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyClinic.Logic", "MyClinic.Logic\MyClinic.Logic.csproj", "{9BB5B6B8-DE7C-402D-84A1-8BA4E4A798A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B14F9ED-7C4A-4604-8F8C-726A44760A54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B14F9ED-7C4A-4604-8F8C-726A44760A54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B14F9ED-7C4A-4604-8F8C-726A44760A54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B14F9ED-7C4A-4604-8F8C-726A44760A54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68FFF4E2-51EC-404C-B642-5B5BBEEDD795}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68FFF4E2-51EC-404C-B642-5B5BBEEDD795}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68FFF4E2-51EC-404C-B642-5B5BBEEDD795}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68FFF4E2-51EC-404C-B642-5B5BBEEDD795}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BB5B6B8-DE7C-402D-84A1-8BA4E4A798A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BB5B6B8-DE7C-402D-84A1-8BA4E4A798A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BB5B6B8-DE7C-402D-84A1-8BA4E4A798A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BB5B6B8-DE7C-402D-84A1-8BA4E4A798A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

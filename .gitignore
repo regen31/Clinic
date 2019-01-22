@@ -1,0 +1,7 @@
+MyClinic.Domain/bin/
+MyClinic.Domain/obj/
+MyClinic.WEB/bin/
+MyClinic.WEB/obj/
+MyClinic.Logic/bin/
+MyClinic.Logic/obj
+.vs
