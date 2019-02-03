@@ -4,9 +4,32 @@
     
 }
 
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
 <h2>Sign index</h2>
 
 @foreach(var doc in Model)
-{
-    @Html.ActionLink(doc.FirstName + " " + doc.LastName, "GetSchedule", "Sign", new { docid = doc.Id }, new {@class = "doclink" }) <br>
+{    
+    <button class="docbutton" docid="@doc.Id">@doc.FirstName  @doc.LastName</button>
 }
+
+
+
+<script>
+    $('body').on('click', '.docbutton', function () {
+        var doctorid = $(this).attr('docid');
+
+        $.ajax({
+            url: "/Sign/GetSchedule",
+            type: "POST",
+            data: {docid: doctorid},
+            datatype: 'html',
+            
+            success: function (result) {
+                $('#schedule').remove();
+                $('body').append(result);
+            }
+        })
+    })
+</script>

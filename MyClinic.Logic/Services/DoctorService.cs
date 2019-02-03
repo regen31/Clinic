@@ -7,6 +7,8 @@ using MyClinic.Domain.Entities;
 using MyClinic.Domain.Interfaces;
 using MyClinic.Logic.Interfaces;
 using MyClinic.Logic.DTO;
+using MyClinic.Logic.Classes;
+
 
 namespace MyClinic.Logic.Services
 {
@@ -35,6 +37,36 @@ namespace MyClinic.Logic.Services
             }
 
             return dtolist;
+        }
+
+        public IEnumerable<ScheduleForDate> GetScheduleForDoctor(int docid)
+        {
+            List<ScheduleForDate> schedule = new List<ScheduleForDate>();
+            DateTime currentdate = DateTime.Now.AddDays(1);
+            var doctor = docrepository.GetDoctor(docid);
+
+            while(schedule.Count < 6)
+            {
+                if(currentdate.DayOfWeek != DayOfWeek.Saturday && currentdate.DayOfWeek != DayOfWeek.Sunday)
+                {
+                    schedule.Add(new ScheduleForDate {DoctorId = doctor.Id, Date = currentdate, Times = GettingTimes(doctor.Id, currentdate) });                    
+                }
+                currentdate = currentdate.AddDays(1);
+            }
+
+            return schedule;
+        }
+
+        private IEnumerable<DateTime> GettingTimes(int docid, DateTime date) 
+        {
+            var doctor = docrepository.GetDoctor(docid);
+            List<DateTime> timelist = new List<DateTime>();
+
+            foreach(var time in doctor.Times)
+            {
+                timelist.Add(time.ReceiptTime);
+            }
+            return timelist;
         }
     }
 }

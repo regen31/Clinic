@@ -18,15 +18,18 @@ namespace MyClinic.Domain.EFContext
             Doctor d3 = new Doctor() { FirstName = "Павел", LastName = "Павлов", };           
 
             Time t1 = new Time { ReceiptTime = new DateTime (2019, 1, 19, 11, 0, 0), Doctor = d1 };
-           // Time t2 = new Time { ReceiptTime = new DateTime(0001, 01, 01, 13, 0, 1), Doctor = d1 };
-           // Time t3 = new Time { ReceiptTime = new DateTime(0001, 01, 01, 14, 0, 1), Doctor = d2 };
-           // Time t4 = new Time { ReceiptTime = new DateTime(0001, 01, 01, 12, 0, 1), Doctor = d3 };
+            Time t2 = new Time { ReceiptTime = new DateTime(2019, 1, 19, 11, 0, 0), Doctor = d1 };
+            Time t3 = new Time { ReceiptTime = new DateTime(2019, 1, 19, 11, 0, 0), Doctor = d2 };
+            Time t4 = new Time { ReceiptTime = new DateTime(2019, 1, 19, 11, 0, 0), Doctor = d3 };
 
             context.Doctors.Add(d1);
             context.Doctors.Add(d2);
             context.Doctors.Add(d3);
             context.Times.Add(t1);
-            
+            context.Times.Add(t2);
+            context.Times.Add(t3);
+            context.Times.Add(t4);
+
             context.SaveChanges();
         }
     }

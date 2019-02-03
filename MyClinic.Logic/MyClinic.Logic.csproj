@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ScheduleForDate.cs" />
     <Compile Include="DTO\DoctorDTO.cs" />
     <Compile Include="DTO\TimeDTO.cs" />
     <Compile Include="Infrastructure\ServiceModule.cs" />

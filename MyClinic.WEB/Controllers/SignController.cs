@@ -38,9 +38,17 @@ namespace MyClinic.WEB.Controllers
             return View(viewlist);
         }
 
-        public ActionResult GetSchedule(int docid)
-        {           
-            return View();
+        public PartialViewResult GetSchedule(int docid)
+        {
+            var schedule = DoctorRepository.GetScheduleForDoctor(docid);
+            List<ScheduleViewModel> models = new List<ScheduleViewModel>();
+            
+            foreach(var item in schedule)
+            {
+                models.Add(new ScheduleViewModel {DoctorId = item.DoctorId, Date = item.Date, Times = item.Times });
+            }         
+              
+            return PartialView(models);
         }
     }
 }

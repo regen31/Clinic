@@ -11,5 +11,6 @@ namespace MyClinic.Domain.Interfaces
     public interface IDoctorRepository
     {
         IEnumerable<Doctor> GetAll();
+        Doctor GetDoctor(int id);
     }
 }

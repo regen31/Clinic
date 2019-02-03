@@ -23,5 +23,12 @@ namespace MyClinic.Domain.Repositories
         {
             return db.Doctors.Include(x => x.Times).ToList();
         }
+
+        public Doctor GetDoctor(int id)
+        {
+            var doc = db.Doctors.Find(id);
+            db.Entry(doc).Collection("Times").Load();
+            return doc;
+        }
     }
 }
