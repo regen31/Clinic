@@ -6,12 +6,24 @@
 <!--Get Schedule-->
 
 <table id="schedule">
+    <tr>
+       <th>Дата</th>
+        <th>День недели</th>
+        <th>Кол-во приемов</th>
+        <th>Время</th>
+    </tr>
     @foreach(var item in Model)
     {
         <tr>
             <td>@item.Date.Date.ToShortDateString()</td>
-            <td>@foreach (var time in item.Times) { @time.ToShortTimeString() }</td>
+            <td>@item.Date.ToString("dddd").ToUpper()</td>
+            <td>@item.Times.Count()</td>
+            <td><div class="image-container"  date="@item.Date.Date.ToShortDateString()"></div></td>                     
+        </tr>
+        <tr>
+            <td colspan="4" class="TimeRow" date="@item.Date.Date.ToShortDateString()" > @foreach (var time in item.Times)   { @time.ToShortTimeString() } </td>
         </tr>
     }
 
 </table>
+

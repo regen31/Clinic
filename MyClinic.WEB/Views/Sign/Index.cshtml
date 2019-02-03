@@ -6,6 +6,7 @@
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link href="~/Content/SchedulePage.css" rel="stylesheet" />
 </head>
 <h2>Sign index</h2>
 
@@ -32,4 +33,22 @@
             }
         })
     })
+
+
+    $('body').on('click', '.image-container', function (event) {
+        var date = $(this).attr('date');
+        var elements = document.getElementsByClassName('TimeRow');
+
+        $('.TimeRow').css('display', 'none');
+        
+        for (var i = 0; i < elements.length; i++) {
+            if (elements.item(i).getAttribute('date') == date) {                
+                elements.item(i).style.display = "table-cell";
+            }
+            
+        }
+        
+        
+        
+    });
 </script>

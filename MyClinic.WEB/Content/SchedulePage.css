@@ -1,0 +1,27 @@
+﻿body {    
+}
+
+table
+{       
+    vertical-align: middle;    
+    border-collapse: separate;
+    text-align:center;    
+}
+
+td, th {    
+    padding: 5px;
+    border: 1px solid black; 
+   }
+
+.image-container{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image:url("/Content/icon2.jpg")
+}
+.image-container:hover{
+    cursor: pointer;
+}
+.TimeRow{
+       display: none;
+}
